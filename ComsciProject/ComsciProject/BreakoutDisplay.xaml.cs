@@ -11,24 +11,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using ComsciProject.Engine.Example;
-using ComsciProject.Engine.PacMan;
-using ComsciProject.Engine;
 using ComsciProject.Engine.Breakout;
+using ComsciProject.Engine;
 
 namespace ComsciProject
 {
     /// <summary>
-    /// Interaction logic for SnakeGameDisplay.xaml
+    /// Interaction logic for BreakoutDisplay.xaml
     /// </summary>
-    public partial class SnakeGameDisplay : Window
+    public partial class BreakoutDisplay : Window
     {
-        public SnakeGameDisplay()
+        public BreakoutDisplay()
         {
             InitializeComponent();
-            //change definition here to change games
-            //Engine.Engine.currentLevel = new ExampleLevel();
-            //Engine.Engine.currentLevel = new PacManLevel();
             Engine.Engine.currentLevel = new BreakoutLevel();
             Engine.Engine.maxUpdateRate = 10f;//10 updates per second are run
             Engine.Engine.Initialize();
